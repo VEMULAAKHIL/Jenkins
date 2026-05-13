@@ -712,19 +712,19 @@ _fct_ChckRep(long indent, signal * lSym, char lName[], char operator[], qword rS
   _fct_TiValueCell(lSym);
 }
 
-void _ttg_fct_tt_3__8()
+void _ttg_fct_tt_1__8()
 {
   // Init FlexRay configuration
 }
-// _ttg_#_3__8
+// _ttg_#_1__8
 // Check ACC Active Status
-void _ttg_fct_tc_3__9()
+void _ttg_fct_tc_1__9()
 {
-  _fct_CallTsTc("_ttg_tc_tc_3__9", 1, 0, "Check ACC Active Status");
+  _fct_CallTsTc("_ttg_tc_tc_1__9", 1, 0, "Check ACC Active Status");
 }
-// _ttg_#_3__9
+// _ttg_#_1__9
 // Check ACC Active Status
-testcase _ttg_tc_tc_3__9()
+testcase _ttg_tc_tc_1__9()
 {
   testReportAddTestCaseId("de31da1b-a08e-4d39-ac07-a860f377aefe");
   TestCommandBegin(5, "Set", "");
@@ -733,7 +733,7 @@ testcase _ttg_tc_tc_3__9()
     _fct_Set(`CAN::dbNode::`GWM::`MO_Message_1::`MO_sig_ReadytoDrive, "CAN signal \'MO_sig_ReadytoDrive\'", 2LL, "");
     _fct_TiTableEnd("1", 0, 0);
   }
-  // _ttg_!_3__13
+  // _ttg_!_1__13
   TestCommandEnd();
   if(_fct_DoStop(EVerdBOF_TC, 1))
   {
@@ -745,7 +745,7 @@ testcase _ttg_tc_tc_3__9()
     _fct_Set(`CAN::dbNode::`BCM::`ACC_BCM_Message::`ACC_Int_status, "CAN signal \'ACC_Int_status\'", 1LL, "");
     _fct_TiTableEnd("1", 0, 0);
   }
-  // _ttg_!_3__21
+  // _ttg_!_1__21
   TestCommandEnd();
   if(_fct_DoStop(EVerdBOF_TC, 1))
   {
@@ -757,7 +757,7 @@ testcase _ttg_tc_tc_3__9()
     _fct_Set(`CAN::dbNode::`BCM::`ACC_BCM_Message::`ACC_MainSwitch_ACC, "CAN signal \'ACC_MainSwitch_ACC\'", 2LL, "");
     _fct_TiTableEnd("1", 0, 0);
   }
-  // _ttg_!_3__29
+  // _ttg_!_1__29
   TestCommandEnd();
   if(_fct_DoStop(EVerdBOF_TC, 1))
   {
@@ -769,7 +769,7 @@ testcase _ttg_tc_tc_3__9()
     _fct_Set(`CAN::dbNode::`GWM::`Gear_Message::`Gear_signal, "CAN signal \'Gear_signal\'", 3LL, "");
     _fct_TiTableEnd("1", 0, 0);
   }
-  // _ttg_!_3__37
+  // _ttg_!_1__37
   TestCommandEnd();
   if(_fct_DoStop(EVerdBOF_TC, 1))
   {
@@ -781,7 +781,7 @@ testcase _ttg_tc_tc_3__9()
     _fct_Set(`CAN::dbNode::`BCM::`RDS_Coder_Data_CAN::`Sig_Spdmtr_Rq, "CAN signal \'Sig_Spdmtr_Rq\'", 70LL, "");
     _fct_TiTableEnd("1", 0, 0);
   }
-  // _ttg_!_3__45
+  // _ttg_!_1__45
   TestCommandEnd();
   if(_fct_DoStop(EVerdBOF_TC, 1))
   {
@@ -793,7 +793,7 @@ testcase _ttg_tc_tc_3__9()
     _fct_Set(`CAN::dbNode::`BCM::`ACC_BCM_Message::`ACC_Set_signal, "CAN signal \'ACC_Set_signal\'", 1LL, "");
     _fct_TiTableEnd("1", 0, 0);
   }
-  // _ttg_!_3__53
+  // _ttg_!_1__53
   TestCommandEnd();
   if(_fct_DoStop(EVerdBOF_TC, 1))
   {
@@ -803,7 +803,7 @@ testcase _ttg_tc_tc_3__9()
   {
     _fct_Wait("1", (int64)(500LL * 1000000LL), 1000000, "");
   }
-  // _ttg_!_3__61
+  // _ttg_!_1__61
   TestCommandEnd();
   if(_fct_DoStop(EVerdBOF_TC, 1))
   {
@@ -816,11 +816,11 @@ testcase _ttg_tc_tc_3__9()
     _fct_TiCellResult(((0!=getSignalTime(`CAN::`ACC_status::`ACC_sig_status)) && CheckSignalMatch(`CAN::`ACC_status::`ACC_sig_status, 2LL, "==") == 1));
     _fct_TiTableEvaluation("1");
   }
-  // _ttg_!_3__67
+  // _ttg_!_1__67
   TestCommandEnd();
   if(_fct_DoStop(EVerdBOF_TC, 1))
   {
     return;
   }
 }
-// _ttg_#_3__9
+// _ttg_#_1__9

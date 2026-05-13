@@ -3,18 +3,17 @@ import time
 import os
 from win32com.client import gencache
 #import pythoncom
-workspace = os.getenv("WORKSPACE")
+
 # Initialize CANoe Application
 CANoe = win32.DispatchEx("CANoe.Application")
 time.sleep(10)
-#CANoe.Open(r"C:\Users\Dell\Downloads\Jenkins\Jenkins\ACC_RBS\pyrbs.cfg")
-cfg_path = os.path.join(workspace,"ACC_RBS","pyrbs.cfg")
+CANoe.Open(r"C:\Users\Dell\Downloads\Jenkins\Jenkins\ACC_RBS\pyrbs.cfg")
 time.sleep(2)
 
 # Test configuration details
 testConfigName = "AutomatedTests_VT_03"
-#testUnitsFolder = r"C:\Users\Dell\Downloads\Jenkins\Jenkins\vTEST_Project\ACC_Testing"  # Folder containing .vtuexe files
-testUnitsFolder = os.path.join(workspace,"vTest_Project","ACC_testing")
+testUnitsFolder = r"C:\Users\Dell\Downloads\Jenkins\Jenkins\vTEST_Project\ACC_Testing"  # Folder containing .vtuexe files
+
 # Ensure CANoe module
 canoeModul = gencache.EnsureModule('{7F31DEB0-5BCC-11D3-8562-00105A3E017B}', 0x0, 1, 54)
 
@@ -85,8 +84,7 @@ print("Opening the vtest report..!")
 time.sleep(1)
 
 # Open the test report file
-#report_file_path = os.path.join(r"C:\Users\Dell\Downloads\Jenkins\Jenkins\ACC_RBS\Report_AutomatedTests_VT_02.vtestreport")
-report_file_path = os.path.join(workspace,"ACC_RBS","Report_AutomatedTests_VT_02.vtestreport")
+report_file_path = os.path.join(r"C:\Users\Dell\Downloads\Jenkins\Jenkins\ACC_RBS\Report_AutomatedTests_VT_02.vtestreport")
 if os.path.exists(report_file_path):
     print(f"Opening report file: {report_file_path}")
     os.startfile(report_file_path)
