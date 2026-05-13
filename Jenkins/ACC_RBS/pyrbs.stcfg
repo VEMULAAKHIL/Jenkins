@@ -1,0 +1,8 @@
+[NStatePersistence]
+Signature=VectorStatePersistence
+[VGlobalMeasurementIndex]
+mMeasurementIndex=86
+[VTestConfigurationConfigData]
+ACC_NextTestRun=2
+[VTestExecutable]
+ACC_LastReportFile=Report_ACC.vtestreport
